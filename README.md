@@ -41,19 +41,6 @@ df_ticks.tail(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -98,19 +85,6 @@ df_ticks.tail(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -156,15 +130,15 @@ Only two columns are required:
    * `close`: Mandatory.
    * `datetime`: If is not present, the index will be used.
 <br>You can add other columns if you want, just put a list with their names in the `add_columns` parameter.
-       
-After importing rangedf and setting `range_size`, just call `range_df()` with the chosen mode name.<br> 
+
+After importing rangedf and setting `range_size`, just call `range_df()` with the chosen mode name.<br>
 **See all available modes in [rangedf_modes.ipynb](./examples/rangedf_modes.ipynb)**
 
 
 ```python
 from rangedf import Range
 r = Range(df_ticks, range_size=0.0003)
-df = r.range_df() # 'normal' = default 
+df = r.range_df() # 'normal' = default
 df.head(3)
 df.tail(3)
 ```
@@ -173,19 +147,6 @@ df.tail(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -240,19 +201,6 @@ df.tail(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -308,7 +256,7 @@ You can use `mpf.plot()` or `r.plot()`, as in the example below.
 
 ```python
 import mplfinance as mpf
-mpf.plot(df.iloc[:130], type='candle', volume=True, style="charles", 
+mpf.plot(df.iloc[:130], type='candle', volume=True, style="charles",
          title=f"Range: normal\nrange_size: 0.0003")
 mpf.show()
 # same as:
@@ -316,9 +264,9 @@ mpf.show()
 ```
 
 
-    
+
 ![png](./readme_files/README_6_0.png)
-    
+
 
 
 As described in [rangedf_modes.ipynb](./examples/rangedf_modes.ipynb), we can have multiple dataframes of different modes from the same instance.
@@ -339,15 +287,15 @@ mpf.show()
 ```
 
 
-    
+
 ![png](./readme_files/README_8_0.png)
-    
+
 
 
 # <a name="anim"></a>Animation/Real-time Range Chart
 To run the animation examples, clone this repository, then into the `rangedf/examples` folder, run:
 
- * python ws_animchart_demo.py 
+ * python ws_animchart_demo.py
  * python ws_multichart_demo.py
  * python ws_externaldf_demo.py
 
@@ -356,12 +304,12 @@ To run the animation examples, clone this repository, then into the `rangedf/exa
 # <a name="calculated"></a>Is the Range chart calculated correctly?
 I also asked myself the same question, how about we see for ourselves? <br>
 We are going to do this based on *Spotware's FX/CFD Trading Platform* called **cTrader**,<br>
-using *IC Markets/Trading* as a Price Provider. 
+using *IC Markets/Trading* as a Price Provider.
 #### **[Let's go!](./examples/comparison_ctrader.ipynb)**
 
 **RESUME**: Despite the possible occurrence of more/less bars in cases of gap, the range calculation is practically the same or very approximate.
 
 ### Non-Affiliation Disclaimer
-I'm not endorsed by, directly affiliated with, maintained, authorized, or sponsored by any company previously mentioned. 
-All product and company names are the registered trademarks of their original owners. 
+I'm not endorsed by, directly affiliated with, maintained, authorized, or sponsored by any company previously mentioned.
+All product and company names are the registered trademarks of their original owners.
 The use of any trade name or trademark is for identification and reference purposes only and does not imply any association with the trademark holder of their product brand.
