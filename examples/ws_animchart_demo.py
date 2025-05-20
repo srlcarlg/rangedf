@@ -18,7 +18,7 @@ import mplfinance as mpf
 import pandas as pd
 from matplotlib import animation
 
-from src.rangedf.rangedf import RangeWS
+from rangedf import RangeWS
 
 df_ticks = pd.read_parquet('data/BNBUSDT-aggTrades-2023-06_9000Rows.parquet')
 
